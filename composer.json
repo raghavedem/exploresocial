@@ -22,7 +22,10 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files":[
+            "app/Helpers/facebook_helper.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

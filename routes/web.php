@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('test','HomeController@index');
+$router->get('facebook/redirect','HomeController@facebook_redirect');
