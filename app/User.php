@@ -18,7 +18,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'username', 'email',
     ];
 
     /**
@@ -29,4 +29,14 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    protected $timesstamp = false;
+
+    public function facebook_accounts()
+   {
+
+       return $this->hasMany('App\FacebookAccount','uid');
+ 
+   }
+
 }
